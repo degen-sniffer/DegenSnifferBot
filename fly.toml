@@ -1,0 +1,16 @@
+app = 'sniffer'
+primary_region = 'fra'
+
+[build]
+
+[[mounts]]
+  source = 'data'
+  destination = '/data'
+
+[processes]
+  worker = 'pnpm start'
+
+[[vm]]
+  size = 'shared-cpu-1x'
+  memory = '512'
+  processes = ['worker']

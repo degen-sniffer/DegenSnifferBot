@@ -1,0 +1,34 @@
+{
+  "name": "degen-sniffer",
+  "type": "module",
+  "imports": {
+    "#src/*": "./src/*"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js --watch src",
+    "inspect": "node --inspect src/index.js",
+    "lint": "eslint \"**/*.js\" --config ./eslint.config.mjs",
+    "format": "prettier --write \"./src/**/*.js\""
+  },
+  "files": [
+    "src"
+  ],
+  "devDependencies": {
+    "@eslint/js": "^9.18.0",
+    "@flydotio/dockerfile": "^0.7.4",
+    "eslint": "^9.18.0",
+    "globals": "^15.14.0",
+    "nodemon": "^3.1.9",
+    "prettier": "^3.4.2"
+  },
+  "engines": {
+    "node": "23.3.0"
+  },
+  "dependencies": {
+    "agent-twitter-client": "workspace:*",
+    "better-sqlite3": "^11.7.2",
+    "dotenv": "^16.4.7",
+    "tesseract.js": "^6.0.0"
+  }
+}
